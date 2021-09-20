@@ -1,16 +1,108 @@
-extends Node
+extends Node2D
+####################################################
+#
+#           Kyletc.com
+#
+#           Hub.gd: (Singleton)
+#
+#          
+#
+#\
+####################################################
+#Declarations
+
+var debugMode = "File" #Full,File,Print
+var debugCount = 1
+var debugCache = []
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+####################################################
+#Virtual Functions
 
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	debugTitle("Debugging Started")
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+
+
+
+
+
+
+####################################################
+#Setters/Getters
+
+
+
+
+
+
+
+
+
+####################################################
+#Private Functions
+
+
+
+
+
+
+
+
+
+
+####################################################
+#Public Functions
+
+
+
+#/Debugging Tools
+func debugTitle(argName):
+	debugCache.append("\n*************       "+argName+"       *************\n")
+	var tempCache = ""
+	var newFile = File.new()
+	for items in debugCache:
+		tempCache+=items+"\n"
+	newFile.open("user://data/debugInfo.txt",File.WRITE)
+	newFile.store_string(tempCache)
+	newFile.close()
+
+func debug(argName,argVar):
+	if  debugMode == "Print":
+		var tempDebugLine = "debug("+str(debugCount)+"): ["+str(argName)+"] :"+str(argVar)
+		print(tempDebugLine)
+		debugCount+=1
+		return
+
+	elif debugMode == "File" :
+
+		var tempDebugLine = "debug("+str(debugCount)+"): ["+str(argName)+"] :"+str(argVar)
+		debugCache.append(tempDebugLine)
+
+		var newFile = File.new()
+		newFile.open("res://data/debugInfo.txt",File.WRITE)
+		var tempCache = ""
+		for items in debugCache:
+			tempCache+=items+"\n"
+		newFile.store_string(tempCache)
+		newFile.close()
+		debugCount+=1
+		return
+
+	elif debugMode == "Full":
+		var tempDebugLine = "debug("+str(debugCount)+"): ["+str(argName)+"] :"+str(argVar)
+		print(tempDebugLine)
+		debugCache.append(tempDebugLine)
+
+		var newFile = File.new()
+		newFile.open("res://data/debugInfo.txt",File.WRITE)
+		var tempCache = ""
+		for items in debugCache:
+			tempCache+=items+"\n"
+		newFile.store_string(tempCache)
+		print("sent")
+		newFile.close()
+		debugCount+=1
+		return

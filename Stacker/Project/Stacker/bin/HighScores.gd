@@ -3,9 +3,9 @@ extends Node2D
 #
 #           Kyletc.com
 #
-#           Square.gd: (Square)
+#           HighScore.gd: (root/HighScore)
 #
-#           Controls Main Menu
+#           Controls HighScore
 #
 
 
@@ -20,7 +20,7 @@ extends Node2D
 ####################################################
 #Declarations
 
-
+signal closed
 
 
 
@@ -64,3 +64,7 @@ func _ready():
 ####################################################
 #Public Functions
 
+func closeHighScores():
+	emit_signal("closed")
+	get_parent().remove_child(self)
+	

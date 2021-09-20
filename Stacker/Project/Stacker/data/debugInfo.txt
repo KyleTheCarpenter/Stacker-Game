@@ -1,0 +1,29 @@
+
+*************       Debugging Started       *************
+
+
+*************       Moving Selector       *************
+
+debug(1): [After Move Selector Pos x:] :280 y:204
+
+*************       Hover Highscores       *************
+
+debug(2): [myChoice] :Start
+
+*************       Change Menu Choice       *************
+
+
+*************       Moving Selector       *************
+
+debug(3): [After Move Selector Pos x:] :280 y:332
+
+*************       Hover Highscores       *************
+
+debug(4): [myChoice] :HighScores
+
+*************       Change Menu Choice       *************
+
+
+*************       Moving Selector       *************
+
+debug(5): [After Move Selector Pos x:] :280 y:204
