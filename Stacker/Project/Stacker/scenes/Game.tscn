@@ -1,6 +1,98 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://bin/Game.gd" type="Script" id=1]
+[ext_resource path="res://resources/button.png" type="Texture" id=1]
+[ext_resource path="res://resources/gameMachine.png" type="Texture" id=2]
+[ext_resource path="res://resources/buttonhover.png" type="Texture" id=3]
+[ext_resource path="res://resources/buttonpressed.png" type="Texture" id=4]
+[ext_resource path="res://bin/Game.gd" type="Script" id=5]
+[ext_resource path="res://resources/justmytype.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://scenes/Square.tscn" type="PackedScene" id=7]
+
+[sub_resource type="StyleBoxTexture" id=1]
+
+[sub_resource type="DynamicFont" id=2]
+size = 61
+extra_spacing_space = 5
+font_data = ExtResource( 6 )
+
+[sub_resource type="StyleBoxTexture" id=3]
+
+[sub_resource type="DynamicFont" id=4]
+size = 50
+extra_spacing_space = 5
+font_data = ExtResource( 6 )
 
 [node name="Game" type="Node2D"]
-script = ExtResource( 1 )
+script = ExtResource( 5 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 800.0
+margin_bottom = 600.0
+color = Color( 0.792157, 0.658824, 0.447059, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="gameMachine" type="Sprite" parent="."]
+position = Vector2( 399.022, 300.328 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 183.378
+margin_top = 20.1233
+margin_right = 638.378
+margin_bottom = 85.1233
+custom_styles/normal = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Stacker"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 641.138
+margin_top = 25.0
+margin_right = 721.138
+margin_bottom = 90.0
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
+text = "Level"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="dataLevel" type="Label" parent="."]
+margin_left = 718.436
+margin_top = 25.0
+margin_right = 798.436
+margin_bottom = 90.0
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
+text = "88"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Square" parent="." instance=ExtResource( 7 )]
+position = Vector2( 419.216, 475.794 )
+
+[node name="Square2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 369.89, 475.743 )
+
+[node name="Square3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 394.386, 475.84 )
+
+[node name="button" type="TextureButton" parent="."]
+margin_left = 347.997
+margin_top = 530.505
+margin_right = 472.997
+margin_bottom = 586.505
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
