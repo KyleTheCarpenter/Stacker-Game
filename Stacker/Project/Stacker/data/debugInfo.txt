@@ -6,9 +6,9 @@
 
 debug(1): [After Move Selector Pos x:] :280 y:204
 
-*************       Hover Highscores       *************
+*************       Hover HighScore       *************
 
-debug(2): [myChoice] :Start
+debug(2): [Opening ] :Start
 
 *************       Change Menu Choice       *************
 
@@ -17,9 +17,9 @@ debug(2): [myChoice] :Start
 
 debug(3): [After Move Selector Pos x:] :280 y:332
 
-*************       Hover Highscores       *************
+*************       Hover Start       *************
 
-debug(4): [myChoice] :HighScores
+debug(4): [Opening] :HighScores
 
 *************       Change Menu Choice       *************
 
@@ -27,3 +27,422 @@ debug(4): [myChoice] :HighScores
 *************       Moving Selector       *************
 
 debug(5): [After Move Selector Pos x:] :280 y:204
+
+*************       AnimeDone       *************
+
+
+*************       First time pressed       *************
+
+
+*************       Action Pressed Lets See Player Spots       *************
+
+debug(6): [1 Player Spot ] :5
+debug(7): [2 Player Spot ] :6
+debug(8): [3 Player Spot ] :7
+
+*************       These are the holder spots       *************
+
+debug(9): [RecordingPlacement ] :5
+debug(10): [RecordingPlacement ] :6
+debug(11): [RecordingPlacement ] :7
+debug(12): [Misses ] :0
+debug(13): [RecordingPlacement ] :5
+debug(14): [RecordingPlacement ] :6
+debug(15): [RecordingPlacement ] :7
+
+*************       Level2       *************
+
+
+*************       Action Pressed Lets See Player Spots       *************
+
+debug(16): [1 Player Spot ] :6
+debug(17): [2 Player Spot ] :7
+debug(18): [3 Player Spot ] :8
+
+*************       These are the holder spots       *************
+
+debug(19): [1 Held Spot ] :5
+debug(20): [2 Held Spot ] :6
+debug(21): [3 Held Spot ] :7
+debug(22): [Comparing 6] :with 5
+debug(23): [Comparing 6] :with 6
+debug(24): [Comparing 6] :with 7
+debug(25): [Comparing 7] :with 5
+debug(26): [Comparing 7] :with 6
+debug(27): [Comparing 7] :with 7
+debug(28): [Comparing 8] :with 5
+debug(29): [Comparing 8] :with 6
+debug(30): [Comparing 8] :with 7
+debug(31): [RecordingPlacement ] :6
+debug(32): [RecordingPlacement ] :7
+debug(33): [Misses ] :1
+debug(34): [RecordingPlacement ] :6
+debug(35): [RecordingPlacement ] :7
+
+*************       Level3       *************
+
+
+*************       Action Pressed Lets See Player Spots       *************
+
+debug(36): [1 Player Spot ] :6
+debug(37): [2 Player Spot ] :7
+
+*************       These are the holder spots       *************
+
+debug(38): [1 Held Spot ] :6
+debug(39): [2 Held Spot ] :7
+debug(40): [Comparing 6] :with 6
+debug(41): [Comparing 6] :with 7
+debug(42): [Comparing 7] :with 6
+debug(43): [Comparing 7] :with 7
+debug(44): [RecordingPlacement ] :6
+debug(45): [RecordingPlacement ] :7
+debug(46): [Misses ] :0
+debug(47): [RecordingPlacement ] :6
+debug(48): [RecordingPlacement ] :7
+
+*************       Level4       *************
+
+
+*************       Action Pressed Lets See Player Spots       *************
+
+debug(49): [1 Player Spot ] :6
+debug(50): [2 Player Spot ] :7
+
+*************       These are the holder spots       *************
+
+debug(51): [1 Held Spot ] :6
+debug(52): [2 Held Spot ] :7
+debug(53): [Comparing 6] :with 6
+debug(54): [Comparing 6] :with 7
+debug(55): [Comparing 7] :with 6
+debug(56): [Comparing 7] :with 7
+debug(57): [RecordingPlacement ] :6
+debug(58): [RecordingPlacement ] :7
+debug(59): [Misses ] :0
+debug(60): [RecordingPlacement ] :6
+debug(61): [RecordingPlacement ] :7
+
+*************       Level5       *************
+
+
+*************       Action Pressed Lets See Player Spots       *************
+
+debug(62): [1 Player Spot ] :6
+debug(63): [2 Player Spot ] :7
+
+*************       These are the holder spots       *************
+
+debug(64): [1 Held Spot ] :6
+debug(65): [2 Held Spot ] :7
+debug(66): [Comparing 6] :with 6
+debug(67): [Comparing 6] :with 7
+debug(68): [Comparing 7] :with 6
+debug(69): [Comparing 7] :with 7
+debug(70): [RecordingPlacement ] :6
+debug(71): [RecordingPlacement ] :7
+debug(72): [Misses ] :0
+debug(73): [RecordingPlacement ] :6
+debug(74): [RecordingPlacement ] :7
+
+*************       Level6       *************
+
+
+*************       Action Pressed Lets See Player Spots       *************
+
+debug(75): [1 Player Spot ] :6
+debug(76): [2 Player Spot ] :7
+
+*************       These are the holder spots       *************
+
+debug(77): [1 Held Spot ] :6
+debug(78): [2 Held Spot ] :7
+debug(79): [Comparing 6] :with 6
+debug(80): [Comparing 6] :with 7
+debug(81): [Comparing 7] :with 6
+debug(82): [Comparing 7] :with 7
+debug(83): [RecordingPlacement ] :6
+debug(84): [RecordingPlacement ] :7
+debug(85): [Misses ] :0
+debug(86): [RecordingPlacement ] :6
+debug(87): [RecordingPlacement ] :7
+
+*************       Level7       *************
+
+
+*************       Action Pressed Lets See Player Spots       *************
+
+debug(88): [1 Player Spot ] :6
+debug(89): [2 Player Spot ] :7
+
+*************       These are the holder spots       *************
+
+debug(90): [1 Held Spot ] :6
+debug(91): [2 Held Spot ] :7
+debug(92): [Comparing 6] :with 6
+debug(93): [Comparing 6] :with 7
+debug(94): [Comparing 7] :with 6
+debug(95): [Comparing 7] :with 7
+debug(96): [RecordingPlacement ] :6
+debug(97): [RecordingPlacement ] :7
+debug(98): [Misses ] :0
+debug(99): [RecordingPlacement ] :6
+debug(100): [RecordingPlacement ] :7
+
+*************       Level8       *************
+
+
+*************       Action Pressed Lets See Player Spots       *************
+
+debug(101): [1 Player Spot ] :6
+debug(102): [2 Player Spot ] :7
+
+*************       These are the holder spots       *************
+
+debug(103): [1 Held Spot ] :6
+debug(104): [2 Held Spot ] :7
+debug(105): [Comparing 6] :with 6
+debug(106): [Comparing 6] :with 7
+debug(107): [Comparing 7] :with 6
+debug(108): [Comparing 7] :with 7
+debug(109): [RecordingPlacement ] :6
+debug(110): [RecordingPlacement ] :7
+debug(111): [Misses ] :0
+debug(112): [RecordingPlacement ] :6
+debug(113): [RecordingPlacement ] :7
+
+*************       Level9       *************
+
+
+*************       Action Pressed Lets See Player Spots       *************
+
+debug(114): [1 Player Spot ] :6
+debug(115): [2 Player Spot ] :7
+
+*************       These are the holder spots       *************
+
+debug(116): [1 Held Spot ] :6
+debug(117): [2 Held Spot ] :7
+debug(118): [Comparing 6] :with 6
+debug(119): [Comparing 6] :with 7
+debug(120): [Comparing 7] :with 6
+debug(121): [Comparing 7] :with 7
+debug(122): [RecordingPlacement ] :6
+debug(123): [RecordingPlacement ] :7
+debug(124): [Misses ] :0
+debug(125): [RecordingPlacement ] :6
+debug(126): [RecordingPlacement ] :7
+
+*************       Level10       *************
+
+
+*************       Action Pressed Lets See Player Spots       *************
+
+debug(127): [1 Player Spot ] :6
+debug(128): [2 Player Spot ] :7
+
+*************       These are the holder spots       *************
+
+debug(129): [1 Held Spot ] :6
+debug(130): [2 Held Spot ] :7
+debug(131): [Comparing 6] :with 6
+debug(132): [Comparing 6] :with 7
+debug(133): [Comparing 7] :with 6
+debug(134): [Comparing 7] :with 7
+debug(135): [RecordingPlacement ] :6
+debug(136): [RecordingPlacement ] :7
+debug(137): [Misses ] :0
+debug(138): [RecordingPlacement ] :6
+debug(139): [RecordingPlacement ] :7
+
+*************       Level11       *************
+
+
+*************       Action Pressed Lets See Player Spots       *************
+
+debug(140): [1 Player Spot ] :5
+debug(141): [2 Player Spot ] :6
+
+*************       These are the holder spots       *************
+
+debug(142): [1 Held Spot ] :6
+debug(143): [2 Held Spot ] :7
+debug(144): [Comparing 5] :with 6
+debug(145): [Comparing 5] :with 7
+debug(146): [Comparing 6] :with 6
+debug(147): [Comparing 6] :with 7
+debug(148): [RecordingPlacement ] :6
+debug(149): [Misses ] :1
+debug(150): [RecordingPlacement ] :6
+
+*************       Level12       *************
+
+
+*************       Action Pressed Lets See Player Spots       *************
+
+debug(151): [1 Player Spot ] :6
+
+*************       These are the holder spots       *************
+
+debug(152): [1 Held Spot ] :6
+debug(153): [Comparing 6] :with 6
+debug(154): [RecordingPlacement ] :6
+debug(155): [Misses ] :0
+debug(156): [RecordingPlacement ] :6
+
+*************       Level13       *************
+
+
+*************       Action Pressed Lets See Player Spots       *************
+
+debug(157): [1 Player Spot ] :6
+
+*************       These are the holder spots       *************
+
+debug(158): [1 Held Spot ] :6
+debug(159): [Comparing 6] :with 6
+debug(160): [RecordingPlacement ] :6
+debug(161): [Misses ] :0
+debug(162): [RecordingPlacement ] :6
+
+*************       Level14       *************
+
+
+*************       Action Pressed Lets See Player Spots       *************
+
+debug(163): [1 Player Spot ] :6
+
+*************       These are the holder spots       *************
+
+debug(164): [1 Held Spot ] :6
+debug(165): [Comparing 6] :with 6
+debug(166): [RecordingPlacement ] :6
+debug(167): [Misses ] :0
+debug(168): [RecordingPlacement ] :6
+
+*************       Level15       *************
+
+
+*************       Action Pressed Lets See Player Spots       *************
+
+debug(169): [1 Player Spot ] :7
+
+*************       These are the holder spots       *************
+
+debug(170): [1 Held Spot ] :6
+debug(171): [Comparing 7] :with 6
+debug(172): [Misses ] :1
+
+*************       Hover Start       *************
+
+debug(173): [Opening] :HighScores
+
+*************       Change Menu Choice       *************
+
+
+*************       Moving Selector       *************
+
+debug(174): [After Move Selector Pos x:] :280 y:204
+
+*************       Hover HighScore       *************
+
+debug(175): [Opening ] :Start
+
+*************       Change Menu Choice       *************
+
+
+*************       Moving Selector       *************
+
+debug(176): [After Move Selector Pos x:] :280 y:332
+
+*************       Hover HighScore       *************
+
+debug(177): [Opening ] :HighScores
+
+*************       Hover Start       *************
+
+debug(178): [Opening] :HighScores
+
+*************       Change Menu Choice       *************
+
+
+*************       Moving Selector       *************
+
+debug(179): [After Move Selector Pos x:] :280 y:204
+
+*************       Hover HighScore       *************
+
+debug(180): [Opening ] :Start
+
+*************       Change Menu Choice       *************
+
+
+*************       Moving Selector       *************
+
+debug(181): [After Move Selector Pos x:] :280 y:332
+
+*************       Hover Start       *************
+
+debug(182): [Opening] :HighScores
+
+*************       Change Menu Choice       *************
+
+
+*************       Moving Selector       *************
+
+debug(183): [After Move Selector Pos x:] :280 y:204
+
+*************       Hover HighScore       *************
+
+debug(184): [Opening ] :Start
+
+*************       Change Menu Choice       *************
+
+
+*************       Moving Selector       *************
+
+debug(185): [After Move Selector Pos x:] :280 y:332
+
+*************       Hover Start       *************
+
+debug(186): [Opening] :HighScores
+
+*************       Change Menu Choice       *************
+
+
+*************       Moving Selector       *************
+
+debug(187): [After Move Selector Pos x:] :280 y:204
+
+*************       Hover HighScore       *************
+
+debug(188): [Opening ] :Start
+
+*************       Change Menu Choice       *************
+
+
+*************       Moving Selector       *************
+
+debug(189): [After Move Selector Pos x:] :280 y:332
+
+*************       Hover Start       *************
+
+debug(190): [Opening] :HighScores
+
+*************       Change Menu Choice       *************
+
+
+*************       Moving Selector       *************
+
+debug(191): [After Move Selector Pos x:] :280 y:204
+
+*************       Hover HighScore       *************
+
+debug(192): [Opening ] :Start
+
+*************       Change Menu Choice       *************
+
+
+*************       Moving Selector       *************
+
+debug(193): [After Move Selector Pos x:] :280 y:332

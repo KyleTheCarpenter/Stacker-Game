@@ -4,16 +4,16 @@
 [ext_resource path="res://resources/gameMachine.png" type="Texture" id=2]
 [ext_resource path="res://resources/justmytype.ttf" type="DynamicFontData" id=3]
 
-[sub_resource type="StyleBoxTexture" id=1]
+[sub_resource type="StyleBoxTexture" id=8]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=9]
 size = 61
 extra_spacing_space = 5
 font_data = ExtResource( 3 )
 
-[sub_resource type="StyleBoxTexture" id=3]
+[sub_resource type="StyleBoxTexture" id=10]
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=11]
 size = 37
 extra_spacing_space = 5
 font_data = ExtResource( 3 )
@@ -47,8 +47,8 @@ margin_left = 180.382
 margin_top = 26.1165
 margin_right = 635.382
 margin_bottom = 91.1165
-custom_styles/normal = SubResource( 1 )
-custom_fonts/font = SubResource( 2 )
+custom_styles/normal = SubResource( 8 )
+custom_fonts/font = SubResource( 9 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "High Scores"
 align = 1
@@ -61,8 +61,8 @@ margin_left = 184.0
 margin_top = 32.0
 margin_right = 258.0
 margin_bottom = 83.0
-custom_styles/normal = SubResource( 3 )
-custom_fonts/font = SubResource( 4 )
+custom_styles/normal = SubResource( 10 )
+custom_fonts/font = SubResource( 11 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "ESC"
 align = 1

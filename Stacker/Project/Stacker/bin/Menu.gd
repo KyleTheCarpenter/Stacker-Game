@@ -100,14 +100,17 @@ func PursueChoice():
 #Public Functions
 func reloadMenu():
 	menuPause = false
+	myMenuChoice = "HighScores"
 func StartHovered():
-	hub.debugTitle("Hover Highscores")
-	hub.debug("myChoice",myMenuChoice)
+	hub.debugTitle("Hover Start")
+	hub.debug("Opening",myMenuChoice)
 
 	if (myMenuChoice == "HighScores"):
 		changeMenuChoice()
 		MoveSelector()
 func HighScoresHovered():
+	hub.debugTitle("Hover HighScore")
+	hub.debug("Opening ",myMenuChoice)
 	if (myMenuChoice == "Start"):
 		changeMenuChoice()
 		MoveSelector()
