@@ -1,0 +1,368 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://resources/button.png" type="Texture" id=1]
+[ext_resource path="res://resources/gameMachine.png" type="Texture" id=2]
+[ext_resource path="res://resources/buttonhover.png" type="Texture" id=3]
+[ext_resource path="res://resources/buttonpressed.png" type="Texture" id=4]
+[ext_resource path="res://bin/Game.gd" type="Script" id=5]
+[ext_resource path="res://resources/justmytype.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://resources/gameMachineScreen.png" type="Texture" id=7]
+[ext_resource path="res://resources/jumpView.png" type="Texture" id=8]
+
+[sub_resource type="StyleBoxTexture" id=1]
+
+[sub_resource type="DynamicFont" id=2]
+size = 61
+extra_spacing_space = 5
+font_data = ExtResource( 6 )
+
+[sub_resource type="StyleBoxTexture" id=3]
+
+[sub_resource type="DynamicFont" id=4]
+size = 33
+extra_spacing_space = 5
+font_data = ExtResource( 6 )
+
+[sub_resource type="StyleBoxTexture" id=5]
+
+[sub_resource type="DynamicFont" id=6]
+size = 76
+extra_spacing_space = 5
+font_data = ExtResource( 6 )
+
+[sub_resource type="Animation" id=7]
+length = 5.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("gameMachine:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1.3, 1.3 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("dataLevel:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("dataLevel/Time:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 2, 3, 4, 5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ "3", "2", "1", "PLAY" ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("dataLevel/Time:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 5.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("gameMachine:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("gameMachineScreen:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1.3, 1.3 ), Vector2( 1, 1 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("gameMachineScreen/jumpView:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1.3, 1.3 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="StyleBoxTexture" id=8]
+
+[sub_resource type="DynamicFont" id=9]
+size = 50
+extra_spacing_space = 5
+font_data = ExtResource( 6 )
+
+[sub_resource type="StyleBoxTexture" id=15]
+
+[sub_resource type="DynamicFont" id=16]
+size = 25
+extra_spacing_space = 5
+font_data = ExtResource( 6 )
+
+[sub_resource type="StyleBoxTexture" id=10]
+
+[sub_resource type="DynamicFont" id=11]
+size = 33
+extra_spacing_space = 5
+font_data = ExtResource( 6 )
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0.368627, 0.333333, 0.333333, 0.321569 )
+
+[sub_resource type="StyleBoxFlat" id=13]
+bg_color = Color( 0.6, 0.6, 0.6, 0.545098 )
+
+[sub_resource type="StyleBoxEmpty" id=14]
+
+[node name="Game" type="Node2D"]
+position = Vector2( 1, 0 )
+script = ExtResource( 5 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -1.41422
+margin_right = 798.586
+margin_bottom = 600.0
+color = Color( 0.792157, 0.658824, 0.447059, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="gameMachineScreen" type="Sprite" parent="."]
+position = Vector2( 400.477, 301.819 )
+texture = ExtResource( 7 )
+
+[node name="jumpView" type="Sprite" parent="gameMachineScreen"]
+position = Vector2( 10.629, -782.014 )
+texture = ExtResource( 8 )
+
+[node name="ColorRect2" type="ColorRect" parent="gameMachineScreen"]
+margin_left = -395.0
+margin_top = -302.0
+margin_right = 405.0
+margin_bottom = -274.0
+color = Color( 0.792157, 0.658824, 0.447059, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="gameMachine" type="Sprite" parent="."]
+position = Vector2( 406.022, 300.328 )
+texture = ExtResource( 2 )
+
+[node name="button" type="TextureButton" parent="gameMachine"]
+margin_left = -51.025
+margin_top = 230.177
+margin_right = 73.975
+margin_bottom = 286.177
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="gameMachine"]
+margin_left = -215.644
+margin_top = -280.205
+margin_right = 239.356
+margin_bottom = -215.205
+custom_styles/normal = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Stacker"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="dataLevel" type="Label" parent="."]
+margin_left = 270.221
+margin_top = 94.4677
+margin_right = 350.221
+margin_bottom = 159.468
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "88"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Time" type="Label" parent="dataLevel"]
+margin_left = -74.7207
+margin_top = 164.369
+margin_right = 380.28
+margin_bottom = 244.369
+custom_styles/normal = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.219608, 0.639216, 0.117647, 1 )
+text = "2"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="dataLevel"]
+margin_left = -49.0432
+margin_right = 30.9568
+margin_bottom = 65.0
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Level"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="anime" type="AnimationPlayer" parent="."]
+autoplay = "load"
+anims/load = SubResource( 7 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.5
+one_shot = true
+autostart = true
+
+[node name="Finish" type="Node2D" parent="."]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="Finish"]
+margin_left = 266.0
+margin_top = 199.0
+margin_right = 554.0
+margin_bottom = 446.0
+color = Color( 0.486275, 0.478431, 0.478431, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="Finish/ColorRect"]
+margin_left = -6.0
+margin_top = -11.0
+margin_right = 282.0
+margin_bottom = 238.0
+color = Color( 0.592157, 0.592157, 0.592157, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="Finish"]
+margin_left = 317.389
+margin_top = 199.617
+margin_right = 500.389
+margin_bottom = 264.617
+custom_styles/normal = SubResource( 8 )
+custom_fonts/font = SubResource( 9 )
+text = "GAME OVER"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="Finish"]
+margin_left = 269.713
+margin_top = 289.671
+margin_right = 545.713
+margin_bottom = 354.671
+custom_styles/normal = SubResource( 15 )
+custom_fonts/font = SubResource( 16 )
+text = "Enter name to submit score"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="Finish"]
+margin_left = 400.732
+margin_top = 401.504
+margin_right = 583.732
+margin_bottom = 466.504
+custom_styles/normal = SubResource( 10 )
+custom_fonts/font = SubResource( 11 )
+text = "HighScores"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label6" type="Label" parent="Finish"]
+margin_left = 230.158
+margin_top = 400.445
+margin_right = 413.158
+margin_bottom = 465.445
+custom_styles/normal = SubResource( 10 )
+custom_fonts/font = SubResource( 11 )
+text = "Play Again"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="data" type="LineEdit" parent="Finish"]
+margin_left = 286.634
+margin_top = 326.416
+margin_right = 529.634
+margin_bottom = 363.416
+max_length = 12
+clear_button_enabled = true
+
+[node name="esc" type="Button" parent="Finish"]
+margin_left = 430.0
+margin_top = 404.0
+margin_right = 548.0
+margin_bottom = 438.0
+custom_styles/hover = SubResource( 12 )
+custom_styles/pressed = SubResource( 13 )
+custom_styles/normal = SubResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="again" type="Button" parent="Finish"]
+margin_left = 261.545
+margin_top = 400.822
+margin_right = 379.545
+margin_bottom = 434.822
+custom_styles/hover = SubResource( 12 )
+custom_styles/pressed = SubResource( 13 )
+custom_styles/normal = SubResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="timeout" from="Timer" to="." method="StartPlay"]
+[connection signal="pressed" from="Finish/esc" to="." method="closeStart"]
+[connection signal="pressed" from="Finish/again" to="." method="playAgain"]

@@ -1,0 +1,86 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://resources/justmytype.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://bin/Score.gd" type="Script" id=2]
+
+[sub_resource type="StyleBoxTexture" id=1]
+
+[sub_resource type="DynamicFont" id=2]
+size = 37
+extra_spacing_space = 5
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxTexture" id=3]
+
+[sub_resource type="DynamicFont" id=4]
+size = 45
+extra_spacing_space = 5
+font_data = ExtResource( 1 )
+
+[node name="Score" type="Node2D"]
+position = Vector2( 4, 0 )
+script = ExtResource( 2 )
+
+[node name="data" type="Label" parent="."]
+margin_left = 388.684
+margin_top = 146.958
+margin_right = 462.684
+margin_bottom = 197.958
+custom_styles/normal = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "12"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="name" type="Label" parent="."]
+margin_left = 179.0
+margin_top = 147.0
+margin_right = 357.0
+margin_bottom = 198.0
+custom_styles/normal = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Suzie"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="number" type="Label" parent="."]
+margin_left = 202.849
+margin_top = 146.067
+margin_right = 276.849
+margin_bottom = 197.067
+custom_styles/normal = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "#1"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="number2" type="Label" parent="."]
+margin_left = 337.849
+margin_top = 143.067
+margin_right = 411.849
+margin_bottom = 194.067
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
+text = "|"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = 207.189
+margin_top = 130.0
+margin_right = 471.189
+margin_bottom = 197.0
+color = Color( 0.631373, 0.631373, 0.631373, 0.105882 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
