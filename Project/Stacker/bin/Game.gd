@@ -1,3 +1,5 @@
+
+   
 extends Node2D
 ####################################################
 #
@@ -29,6 +31,7 @@ var heightCount = 1
 var playerCounter = 3
 var gameSpeed = .5
 var firstTime = true
+
 onready var hub = get_node("/root/Hub")
 
 
@@ -40,11 +43,6 @@ onready var hub = get_node("/root/Hub")
 func _ready():
 	get_node("dataLevel").text = str(heightCount)
 
-func _input(_event):
-	if allowedToPlace:
-		if !pause:
-			if Input.is_action_just_pressed("ActionPressed"):
-				ActionPressed()
 
 var time = 0
 var clock = 0
@@ -58,8 +56,8 @@ func _process(delta):
 func doClock():
 	clock+=1
 	var temp = heightCount
-	if temp > 14:
-		temp = 14
+	if temp > 12:
+		temp = 12
 	if clock >= 20-temp :
 		movePlayer()
 		clock = 0
@@ -91,12 +89,12 @@ func recordPlacement():
 func loadSquare(argSpot,argHeight,origDirection):
 	
 	var square = preload("res://scenes/Square.tscn").instance()
-	add_child(square)
+	get_node("screen").add_child(square)
 	square.setSpot(argSpot)
-	if argHeight < 12:
+	if argHeight < 10:
 		square.setHeight(argHeight)
-	if argHeight >=12:
-		square.setHeight(12)
+	if argHeight >=10:
+		square.setHeight(10)
 	square.setDirection(origDirection)
 	square.connect("left",self,"changeDirectionL")
 	square.connect("right",self,"changeDirectionR")
@@ -142,7 +140,7 @@ func movePlayer():
 
 func spawnFallingSquare(arg):
 	var squareFall = preload("res://scenes/Square.tscn").instance()
-	add_child(squareFall)
+	get_node("screen").add_child(squareFall)
 	squareFall.position = arg.position
 	squareFall.get_node("blue").visible = true
 	squareFall.fallDown()
@@ -154,97 +152,101 @@ func StartPlay():
 	allowedToPlace = true
 
 func ActionPressed():
-	if firstTime:
-		firstTime = false
-		hub.debugTitle("First time pressed")
-	var counte = 0
-	hub.debugTitle("Action Pressed Lets See Player Spots")
-	for item in player:
-		counte +=1
-		hub.debug(str(counte)+" Player Spot ", str(item.getSpot()))
+	if !pause && allowedToPlace:
+		if firstTime:
+			firstTime = false
+			hub.debugTitle("First time pressed")
+		var counte = 0
+		hub.debugTitle("Action Pressed Lets See Player Spots")
+		for item in player:
+			counte +=1
+			hub.debug(str(counte)+" Player Spot ", str(item.getSpot()))
 
 
-	hub.debugTitle("These are the holder spots")
-	counte = 0
-	var wins = 0
-	for item in holderPlacement:
-		counte +=1
-		hub.debug(str(counte)+" Held Spot ", str(item))
+		hub.debugTitle("These are the holder spots")
+		counte = 0
+		var wins = 0
+		for item in holderPlacement:
+			counte +=1
+			hub.debug(str(counte)+" Held Spot ", str(item))
 
-	if !holderPlacement.empty():
-		for squares in player:
-			squares.safe = false
-			
-			
-
-		for squares in player:
-			var found = false
-			for items in holderPlacement:
-				
-				hub.debug("Comparing " + str(squares.getSpot()), "with "+ str(items))
-				if squares.getSpot() == items:
-					found = true
-			if found == false:
+		if !holderPlacement.empty():
+			for squares in player:
 				squares.safe = false
-				squares.visible = false
-				wins +=1
+				
+				
 
+			for squares in player:
+				var found = false
+				for items in holderPlacement:
 					
-	for items in player:
-		if items.visible == false:
-			remove_child(items)
-			spawnFallingSquare(items)
-			hub.debugTitle("Erasing Items")
-			player.erase(items)
-			
+					hub.debug("Comparing " + str(squares.getSpot()), "with "+ str(items))
+					if squares.getSpot() == items:
+						found = true
+				if found == false:
+					squares.safe = false
+					squares.visible = false
+					spawnFallingSquare(squares)
+					wins +=1
+
+						
+		for items in player:
+			if items.visible == false:
+				remove_child(items)
+				hub.debugTitle("Erasing Items")
+				player.erase(items)
 				
-				
-				
-	
+					
+					
+					
+		
 
-	playerCounter-= wins
-	recordPlacement()
-	hub.debug("Misses ",wins)
-	if playerCounter <= 0:
-		pause = true
-		for items in playerCache:
-			items.visible = false
-		get_node("Finish").visible = true
-		return
-
-	gameSpeed = .5 - (heightCount /16)
-	var firstSpotX = player[0].getSpot()
-	var origDirection = player[0].getDirection()
-	
-	for items in player:
-		playerCache.append(items)
-	recordPlacement()
-	player.clear()
-
-	heightCount+=1
-	hub.debugTitle("Level" + str(heightCount))
-	var tempPlayerCounter = 0
-	
-	while tempPlayerCounter < playerCounter:
-		loadSquare(firstSpotX,heightCount,origDirection)
-		firstSpotX+=1
-		tempPlayerCounter+=1
-		get_node("dataLevel").text = str(heightCount)
-
-	if heightCount > 12:
-		get_node("gameMachineScreen/jumpView").position.y+=25
-		for items in playerCache:
-			items.position.y+= 25
-			if items.position.y >= 464:
+		playerCounter-= wins
+		recordPlacement()
+		hub.debug("Misses ",wins)
+		if playerCounter <= 0:
+			pause = true
+			for items in playerCache:
 				items.visible = false
-			
-	allowedToPlace = true
-	
+			get_node("Finish").visible = true
+			return
+
+		gameSpeed = .5 - (heightCount /16)
+		var firstSpotX = player[0].getSpot()
+		var origDirection = player[0].getDirection()
+		
+		for items in player:
+			playerCache.append(items)
+		recordPlacement()
+		player.clear()
+
+		heightCount+=1
+		hub.debugTitle("Level" + str(heightCount))
+		var tempPlayerCounter = 0
+		
+		while tempPlayerCounter < playerCounter:
+			loadSquare(firstSpotX,heightCount,origDirection)
+			firstSpotX+=1
+			tempPlayerCounter+=1
+			get_node("dataLevel").text = str(heightCount)
+
+		if heightCount > 10:
+			get_node("screen/jumpView").position.y+=25
+			for items in playerCache:
+				items.position.y+= 25
+				if items.position.y >= items.startPosY:
+					items.visible = false
+				
+		allowedToPlace = true
+		recordPlacement()
 	
 func closeStart():
 	switchMenus("HighScores")
  
 func switchMenus(argS):
+	player.clear()
+	playerCache.clear()
+	holderPlacement.clear()
 	get_node("Finish").visible = false
 	if get_node("Finish/data").text!= "":
 		hub.saveHighScores(get_node("Finish/data").text,get_node("dataLevel").text)

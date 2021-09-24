@@ -93,7 +93,7 @@ tracks/4/keys = {
 "values": [ true ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("gameMachineScreen:scale")
+tracks/5/path = NodePath("screen:scale")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -105,7 +105,7 @@ tracks/5/keys = {
 "values": [ Vector2( 1.3, 1.3 ), Vector2( 1, 1 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("gameMachineScreen/jumpView:scale")
+tracks/6/path = NodePath("screen/jumpView:scale")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -115,6 +115,30 @@ tracks/6/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1.3, 1.3 ), Vector2( 1, 1 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("screen:offset")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 400, 310 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("screen:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -126.373, -125.017 ), Vector2( 0.479614, -12.7634 ) ]
 }
 
 [sub_resource type="StyleBoxTexture" id=8]
@@ -147,7 +171,7 @@ bg_color = Color( 0.6, 0.6, 0.6, 0.545098 )
 [sub_resource type="StyleBoxEmpty" id=14]
 
 [node name="Game" type="Node2D"]
-position = Vector2( 1, 0 )
+position = Vector2( -204.536, 4.23785 )
 script = ExtResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -159,19 +183,20 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="gameMachineScreen" type="Sprite" parent="."]
-position = Vector2( 400.477, 301.819 )
+[node name="screen" type="Sprite" parent="."]
+position = Vector2( 0.479614, -12.7634 )
 texture = ExtResource( 7 )
+offset = Vector2( 400, 310 )
 
-[node name="jumpView" type="Sprite" parent="gameMachineScreen"]
-position = Vector2( 10.629, -782.014 )
+[node name="jumpView" type="Sprite" parent="screen"]
+position = Vector2( 415.172, -480.854 )
 texture = ExtResource( 8 )
 
-[node name="ColorRect2" type="ColorRect" parent="gameMachineScreen"]
-margin_left = -395.0
-margin_top = -302.0
-margin_right = 405.0
-margin_bottom = -274.0
+[node name="ColorRect2" type="ColorRect" parent="screen"]
+margin_left = 9.93982
+margin_top = 2.06212
+margin_right = 809.94
+margin_bottom = 30.0621
 color = Color( 0.792157, 0.658824, 0.447059, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -228,7 +253,7 @@ margin_bottom = 244.369
 custom_styles/normal = SubResource( 5 )
 custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0.219608, 0.639216, 0.117647, 1 )
-text = "2"
+text = "3"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
@@ -363,6 +388,21 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="debug" type="Label" parent="."]
+visible = false
+margin_left = -122.163
+margin_top = 97.9048
+margin_right = 332.837
+margin_bottom = 162.905
+custom_styles/normal = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Stacker"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="gameMachine/button" to="." method="ActionPressed"]
 [connection signal="timeout" from="Timer" to="." method="StartPlay"]
 [connection signal="pressed" from="Finish/esc" to="." method="closeStart"]
 [connection signal="pressed" from="Finish/again" to="." method="playAgain"]

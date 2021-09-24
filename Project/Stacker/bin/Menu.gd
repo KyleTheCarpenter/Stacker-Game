@@ -63,7 +63,7 @@ func getMenuChoice(): return myMenuChoice
 
 func MoveSelector(): #Moves the Selector Node
 	
-	hub.debugTitle("Moving Selector")
+	
 	match getMenuChoice():	
 		"Start":
 			get_node("Selector").set_position(get_node("lblStart").get_position())
@@ -72,9 +72,8 @@ func MoveSelector(): #Moves the Selector Node
 			get_node("Selector").set_position(get_node("lblHighScores").get_position())
 
 	get_node("Selector").set_position(Vector2(get_node("Selector").get_position().x,get_node("Selector").get_position().y-20))
-	hub.debug("After Move Selector Pos x:",str(get_node("Selector").get_position().x)+" y:"+str(get_node("Selector").get_position().y))
+	
 func changeMenuChoice(): #called by Up/Down Key or hoverd Buttons
-	hub.debugTitle("Change Menu Choice")
 	match myMenuChoice:
 		"Start":
 			myMenuChoice = "HighScores"
@@ -102,14 +101,10 @@ func reloadMenu():
 	menuPause = false
 	myMenuChoice = "HighScores"
 func StartHovered():
-	hub.debugTitle("Hover Start")
-	hub.debug("Opening",myMenuChoice)
-
 	if (myMenuChoice == "HighScores"):
 		changeMenuChoice()
 		MoveSelector()
 func HighScoresHovered():
-	hub.debugTitle("Hover HighScore")
 	hub.debug("Opening ",myMenuChoice)
 	if (myMenuChoice == "Start"):
 		changeMenuChoice()

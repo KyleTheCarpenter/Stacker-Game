@@ -27,7 +27,7 @@ var mySpot = 0 # |x||x||x||x||x||x||x||x||x||x||x||x| 12 total
 var myHeight = 1 #max 10
 var mySpeed = 25
 var startPosX = 250
-var startPosY = 470
+var startPosY = 518
 var safe = false
 
 ####################################################

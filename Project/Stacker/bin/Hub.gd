@@ -14,7 +14,7 @@ extends Node2D
 var debugMode = "File" #Full,File,Print
 var debugCount = 1
 var debugCache = []
-var highScores = ""
+var highScores = []
 
 ####################################################
 #Virtual Functions
@@ -22,6 +22,7 @@ var highScores = ""
 
 func _ready():
 	debugTitle("Debugging Started")
+	loadHighScores()
 
 
 
@@ -57,18 +58,27 @@ func _ready():
 #Public Functions
 
 func saveHighScores(argName,argLevel):
-	highScores += argName +"\n" +argLevel + "\n"
+	highScores.append(argName)
+	highScores.append(argLevel)
+	var temp = ""
+	for items in highScores:
+		temp+="\n"+items
 	var newFile = File.new()
+	
 	newFile.open("res://highScores.txt",File.WRITE)
-	newFile.store_string(highScores)
+	newFile.store_string(temp)
 	newFile.close()
 
 func loadHighScores():
 	var newFile = File.new()
-	newFile.open("res://highScores.txt",File.READ)
-	highScores = newFile.get_as_text()
-	newFile.close()
-	return highScores
+	var temp
+	if newFile.file_exists("res://highScores.txt"):
+		newFile.open("res://highScores.txt",File.READ)
+		temp = newFile.get_as_text()
+		newFile.close()
+		highScores = temp.split("\n")
+
+	
 
 #/Debugging Tools
 func debugTitle(argName):

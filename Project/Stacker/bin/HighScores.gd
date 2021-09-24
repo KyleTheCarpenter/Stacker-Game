@@ -53,33 +53,30 @@ func _ready():
 #Private Functions
 
 func loadScores():
-	var highScoreList = hub.loadHighScores()
-
-	highScoreList = highScoreList.split("\n")
-
+	
 	var memName = ""
 	var memData = ""
 	var mem = "Name"
 	var positionJumper = 100
 	var counter = 1
-	for item in highScoreList:
+	for item in hub.highScores:
+		if item != "":
+			match mem:
+				"Name":
+					memName = item
+					mem = "Data"
+				"Data":
+					memData = item
+					mem = "Name"
 
-		match mem:
-			"Name":
-				memName = item
-				mem = "Data"
-			"Data":
-				memData = item
-				mem = "Name"
-
-				var newScore = preload("res://scenes/Score.tscn").instance()
-				add_child(newScore)
-				newScore.position.x = 100
-				newScore.position.y = positionJumper
-				newScore.setStats(memName,memData,counter)
-				counter+=1
-				positionJumper+= 40
-				scores.append(newScore)
+					var newScore = preload("res://scenes/Score.tscn").instance()
+					add_child(newScore)
+					newScore.position.x = 100
+					newScore.position.y = positionJumper
+					newScore.setStats(memName,memData,counter)
+					counter+=1
+					positionJumper+= 40
+					scores.append(newScore)
 
 			
 
