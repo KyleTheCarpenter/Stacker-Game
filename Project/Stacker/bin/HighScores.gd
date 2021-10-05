@@ -70,13 +70,28 @@ func loadScores():
 					mem = "Name"
 
 					var newScore = preload("res://scenes/Score.tscn").instance()
-					add_child(newScore)
-					newScore.position.x = 100
-					newScore.position.y = positionJumper
+					
 					newScore.setStats(memName,memData,counter)
 					counter+=1
-					positionJumper+= 40
 					scores.append(newScore)
+
+	var temp = []
+	var holder = 0
+	for items in scores:
+		if int(items.get_node("data").text) > holder:
+			temp.push_front(items)
+			holder = int(items.get_node("data").text) 
+		else:
+			temp.push_back(items)
+
+
+
+	for newScore in temp:
+		newScore.position.x = 100
+		newScore.position.y = positionJumper
+		positionJumper+= 40
+		add_child(newScore)
+					
 
 			
 

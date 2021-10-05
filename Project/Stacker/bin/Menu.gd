@@ -35,14 +35,20 @@ onready var hub = get_node("/root/Hub")
 func _ready():
 	MoveSelector()
 
+func startPressed():
+	myMenuChoice = "Start"
+	PursueChoice()
+
+func hPressed():
+	myMenuChoice = "HighScores"
+	PursueChoice()
 
 func _input(_event):
 	if not menuPause:
 		if Input.is_action_just_pressed("moveSelector"):
 			changeMenuChoice()
 			MoveSelector()
-		elif Input.is_action_just_pressed("enter"):
-			PursueChoice()
+		
 	
 
 
@@ -105,7 +111,7 @@ func StartHovered():
 		changeMenuChoice()
 		MoveSelector()
 func HighScoresHovered():
-	hub.debug("Opening ",myMenuChoice)
+	
 	if (myMenuChoice == "Start"):
 		changeMenuChoice()
 		MoveSelector()

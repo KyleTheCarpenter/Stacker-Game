@@ -114,13 +114,15 @@ __meta__ = {
 }
 
 [node name="butHighScores" type="TextureButton" parent="Menu"]
-margin_left = 280.0
+margin_left = 276.0
 margin_top = 336.0
-margin_right = 528.0
+margin_right = 524.0
 margin_bottom = 424.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [connection signal="mouse_entered" from="Menu/butStart" to="Menu" method="StartHovered"]
+[connection signal="pressed" from="Menu/butStart" to="Menu" method="startPressed"]
 [connection signal="mouse_entered" from="Menu/butHighScores" to="Menu" method="HighScoresHovered"]
+[connection signal="pressed" from="Menu/butHighScores" to="Menu" method="hPressed"]

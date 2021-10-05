@@ -1,8 +1,6 @@
 
 *************       Debugging Started       *************
 
-debug(1): [Opening ] :Start
-debug(2): [Opening ] :HighScores
 
 *************       AnimeDone       *************
 
@@ -12,285 +10,498 @@ debug(2): [Opening ] :HighScores
 
 *************       Action Pressed Lets See Player Spots       *************
 
-debug(3): [1 Player Spot ] :1
-debug(4): [2 Player Spot ] :2
-debug(5): [3 Player Spot ] :3
+debug(1): [1 Player Spot ] :6
+debug(2): [2 Player Spot ] :7
+debug(3): [3 Player Spot ] :8
 
 *************       These are the holder spots       *************
 
-debug(6): [RecordingPlacement ] :1
-debug(7): [RecordingPlacement ] :2
-debug(8): [RecordingPlacement ] :3
-debug(9): [Misses ] :0
-debug(10): [RecordingPlacement ] :1
-debug(11): [RecordingPlacement ] :2
-debug(12): [RecordingPlacement ] :3
+debug(4): [RecordingPlacement ] :6
+debug(5): [RecordingPlacement ] :7
+debug(6): [RecordingPlacement ] :8
+debug(7): [Misses ] :0
+debug(8): [RecordingPlacement ] :6
+debug(9): [RecordingPlacement ] :7
+debug(10): [RecordingPlacement ] :8
 
 *************       Level2       *************
 
-debug(13): [RecordingPlacement ] :1
-debug(14): [RecordingPlacement ] :2
-debug(15): [RecordingPlacement ] :3
+debug(11): [RecordingPlacement ] :6
+debug(12): [RecordingPlacement ] :7
+debug(13): [RecordingPlacement ] :8
 
 *************       Action Pressed Lets See Player Spots       *************
 
-debug(16): [1 Player Spot ] :1
-debug(17): [2 Player Spot ] :2
-debug(18): [3 Player Spot ] :3
+debug(14): [1 Player Spot ] :6
+debug(15): [2 Player Spot ] :7
+debug(16): [3 Player Spot ] :8
 
 *************       These are the holder spots       *************
 
-debug(19): [1 Held Spot ] :1
-debug(20): [2 Held Spot ] :2
-debug(21): [3 Held Spot ] :3
-debug(22): [Comparing 1] :with 1
-debug(23): [Comparing 1] :with 2
-debug(24): [Comparing 1] :with 3
-debug(25): [Comparing 2] :with 1
-debug(26): [Comparing 2] :with 2
-debug(27): [Comparing 2] :with 3
-debug(28): [Comparing 3] :with 1
-debug(29): [Comparing 3] :with 2
-debug(30): [Comparing 3] :with 3
-debug(31): [RecordingPlacement ] :1
-debug(32): [RecordingPlacement ] :2
-debug(33): [RecordingPlacement ] :3
-debug(34): [Misses ] :0
-debug(35): [RecordingPlacement ] :1
-debug(36): [RecordingPlacement ] :2
-debug(37): [RecordingPlacement ] :3
+debug(17): [1 Held Spot ] :6
+debug(18): [2 Held Spot ] :7
+debug(19): [3 Held Spot ] :8
+debug(20): [Comparing 6] :with 6
+debug(21): [Comparing 6] :with 7
+debug(22): [Comparing 6] :with 8
+debug(23): [Comparing 7] :with 6
+debug(24): [Comparing 7] :with 7
+debug(25): [Comparing 7] :with 8
+debug(26): [Comparing 8] :with 6
+debug(27): [Comparing 8] :with 7
+debug(28): [Comparing 8] :with 8
+debug(29): [RecordingPlacement ] :6
+debug(30): [RecordingPlacement ] :7
+debug(31): [RecordingPlacement ] :8
+debug(32): [Misses ] :0
+debug(33): [RecordingPlacement ] :6
+debug(34): [RecordingPlacement ] :7
+debug(35): [RecordingPlacement ] :8
 
 *************       Level3       *************
 
-debug(38): [RecordingPlacement ] :1
-debug(39): [RecordingPlacement ] :2
-debug(40): [RecordingPlacement ] :3
+debug(36): [RecordingPlacement ] :6
+debug(37): [RecordingPlacement ] :7
+debug(38): [RecordingPlacement ] :8
 
 *************       Action Pressed Lets See Player Spots       *************
 
-debug(41): [1 Player Spot ] :2
-debug(42): [2 Player Spot ] :3
-debug(43): [3 Player Spot ] :4
+debug(39): [1 Player Spot ] :6
+debug(40): [2 Player Spot ] :7
+debug(41): [3 Player Spot ] :8
 
 *************       These are the holder spots       *************
 
-debug(44): [1 Held Spot ] :1
-debug(45): [2 Held Spot ] :2
-debug(46): [3 Held Spot ] :3
-debug(47): [Comparing 2] :with 1
-debug(48): [Comparing 2] :with 2
-debug(49): [Comparing 2] :with 3
-debug(50): [Comparing 3] :with 1
-debug(51): [Comparing 3] :with 2
-debug(52): [Comparing 3] :with 3
-debug(53): [Comparing 4] :with 1
-debug(54): [Comparing 4] :with 2
-debug(55): [Comparing 4] :with 3
-
-*************       Erasing Items       *************
-
-debug(56): [RecordingPlacement ] :2
-debug(57): [RecordingPlacement ] :3
-debug(58): [Misses ] :1
-debug(59): [RecordingPlacement ] :2
-debug(60): [RecordingPlacement ] :3
+debug(42): [1 Held Spot ] :6
+debug(43): [2 Held Spot ] :7
+debug(44): [3 Held Spot ] :8
+debug(45): [Comparing 6] :with 6
+debug(46): [Comparing 6] :with 7
+debug(47): [Comparing 6] :with 8
+debug(48): [Comparing 7] :with 6
+debug(49): [Comparing 7] :with 7
+debug(50): [Comparing 7] :with 8
+debug(51): [Comparing 8] :with 6
+debug(52): [Comparing 8] :with 7
+debug(53): [Comparing 8] :with 8
+debug(54): [RecordingPlacement ] :6
+debug(55): [RecordingPlacement ] :7
+debug(56): [RecordingPlacement ] :8
+debug(57): [Misses ] :0
+debug(58): [RecordingPlacement ] :6
+debug(59): [RecordingPlacement ] :7
+debug(60): [RecordingPlacement ] :8
 
 *************       Level4       *************
 
-debug(61): [RecordingPlacement ] :2
-debug(62): [RecordingPlacement ] :3
+debug(61): [RecordingPlacement ] :6
+debug(62): [RecordingPlacement ] :7
+debug(63): [RecordingPlacement ] :8
 
 *************       Action Pressed Lets See Player Spots       *************
 
-debug(63): [1 Player Spot ] :2
-debug(64): [2 Player Spot ] :3
+debug(64): [1 Player Spot ] :6
+debug(65): [2 Player Spot ] :7
+debug(66): [3 Player Spot ] :8
 
 *************       These are the holder spots       *************
 
-debug(65): [1 Held Spot ] :2
-debug(66): [2 Held Spot ] :3
-debug(67): [Comparing 2] :with 2
-debug(68): [Comparing 2] :with 3
-debug(69): [Comparing 3] :with 2
-debug(70): [Comparing 3] :with 3
-debug(71): [RecordingPlacement ] :2
-debug(72): [RecordingPlacement ] :3
-debug(73): [Misses ] :0
-debug(74): [RecordingPlacement ] :2
-debug(75): [RecordingPlacement ] :3
+debug(67): [1 Held Spot ] :6
+debug(68): [2 Held Spot ] :7
+debug(69): [3 Held Spot ] :8
+debug(70): [Comparing 6] :with 6
+debug(71): [Comparing 6] :with 7
+debug(72): [Comparing 6] :with 8
+debug(73): [Comparing 7] :with 6
+debug(74): [Comparing 7] :with 7
+debug(75): [Comparing 7] :with 8
+debug(76): [Comparing 8] :with 6
+debug(77): [Comparing 8] :with 7
+debug(78): [Comparing 8] :with 8
+debug(79): [RecordingPlacement ] :6
+debug(80): [RecordingPlacement ] :7
+debug(81): [RecordingPlacement ] :8
+debug(82): [Misses ] :0
+debug(83): [RecordingPlacement ] :6
+debug(84): [RecordingPlacement ] :7
+debug(85): [RecordingPlacement ] :8
 
 *************       Level5       *************
 
-debug(76): [RecordingPlacement ] :2
-debug(77): [RecordingPlacement ] :3
+debug(86): [RecordingPlacement ] :6
+debug(87): [RecordingPlacement ] :7
+debug(88): [RecordingPlacement ] :8
 
 *************       Action Pressed Lets See Player Spots       *************
 
-debug(78): [1 Player Spot ] :2
-debug(79): [2 Player Spot ] :3
+debug(89): [1 Player Spot ] :6
+debug(90): [2 Player Spot ] :7
+debug(91): [3 Player Spot ] :8
 
 *************       These are the holder spots       *************
 
-debug(80): [1 Held Spot ] :2
-debug(81): [2 Held Spot ] :3
-debug(82): [Comparing 2] :with 2
-debug(83): [Comparing 2] :with 3
-debug(84): [Comparing 3] :with 2
-debug(85): [Comparing 3] :with 3
-debug(86): [RecordingPlacement ] :2
-debug(87): [RecordingPlacement ] :3
-debug(88): [Misses ] :0
-debug(89): [RecordingPlacement ] :2
-debug(90): [RecordingPlacement ] :3
+debug(92): [1 Held Spot ] :6
+debug(93): [2 Held Spot ] :7
+debug(94): [3 Held Spot ] :8
+debug(95): [Comparing 6] :with 6
+debug(96): [Comparing 6] :with 7
+debug(97): [Comparing 6] :with 8
+debug(98): [Comparing 7] :with 6
+debug(99): [Comparing 7] :with 7
+debug(100): [Comparing 7] :with 8
+debug(101): [Comparing 8] :with 6
+debug(102): [Comparing 8] :with 7
+debug(103): [Comparing 8] :with 8
+debug(104): [RecordingPlacement ] :6
+debug(105): [RecordingPlacement ] :7
+debug(106): [RecordingPlacement ] :8
+debug(107): [Misses ] :0
+debug(108): [RecordingPlacement ] :6
+debug(109): [RecordingPlacement ] :7
+debug(110): [RecordingPlacement ] :8
 
 *************       Level6       *************
 
-debug(91): [RecordingPlacement ] :2
-debug(92): [RecordingPlacement ] :3
+debug(111): [RecordingPlacement ] :6
+debug(112): [RecordingPlacement ] :7
+debug(113): [RecordingPlacement ] :8
 
 *************       Action Pressed Lets See Player Spots       *************
 
-debug(93): [1 Player Spot ] :2
-debug(94): [2 Player Spot ] :3
+debug(114): [1 Player Spot ] :6
+debug(115): [2 Player Spot ] :7
+debug(116): [3 Player Spot ] :8
 
 *************       These are the holder spots       *************
 
-debug(95): [1 Held Spot ] :2
-debug(96): [2 Held Spot ] :3
-debug(97): [Comparing 2] :with 2
-debug(98): [Comparing 2] :with 3
-debug(99): [Comparing 3] :with 2
-debug(100): [Comparing 3] :with 3
-debug(101): [RecordingPlacement ] :2
-debug(102): [RecordingPlacement ] :3
-debug(103): [Misses ] :0
-debug(104): [RecordingPlacement ] :2
-debug(105): [RecordingPlacement ] :3
+debug(117): [1 Held Spot ] :6
+debug(118): [2 Held Spot ] :7
+debug(119): [3 Held Spot ] :8
+debug(120): [Comparing 6] :with 6
+debug(121): [Comparing 6] :with 7
+debug(122): [Comparing 6] :with 8
+debug(123): [Comparing 7] :with 6
+debug(124): [Comparing 7] :with 7
+debug(125): [Comparing 7] :with 8
+debug(126): [Comparing 8] :with 6
+debug(127): [Comparing 8] :with 7
+debug(128): [Comparing 8] :with 8
+debug(129): [RecordingPlacement ] :6
+debug(130): [RecordingPlacement ] :7
+debug(131): [RecordingPlacement ] :8
+debug(132): [Misses ] :0
+debug(133): [RecordingPlacement ] :6
+debug(134): [RecordingPlacement ] :7
+debug(135): [RecordingPlacement ] :8
 
 *************       Level7       *************
 
-debug(106): [RecordingPlacement ] :2
-debug(107): [RecordingPlacement ] :3
+debug(136): [RecordingPlacement ] :6
+debug(137): [RecordingPlacement ] :7
+debug(138): [RecordingPlacement ] :8
 
 *************       Action Pressed Lets See Player Spots       *************
 
-debug(108): [1 Player Spot ] :2
-debug(109): [2 Player Spot ] :3
+debug(139): [1 Player Spot ] :6
+debug(140): [2 Player Spot ] :7
+debug(141): [3 Player Spot ] :8
 
 *************       These are the holder spots       *************
 
-debug(110): [1 Held Spot ] :2
-debug(111): [2 Held Spot ] :3
-debug(112): [Comparing 2] :with 2
-debug(113): [Comparing 2] :with 3
-debug(114): [Comparing 3] :with 2
-debug(115): [Comparing 3] :with 3
-debug(116): [RecordingPlacement ] :2
-debug(117): [RecordingPlacement ] :3
-debug(118): [Misses ] :0
-debug(119): [RecordingPlacement ] :2
-debug(120): [RecordingPlacement ] :3
+debug(142): [1 Held Spot ] :6
+debug(143): [2 Held Spot ] :7
+debug(144): [3 Held Spot ] :8
+debug(145): [Comparing 6] :with 6
+debug(146): [Comparing 6] :with 7
+debug(147): [Comparing 6] :with 8
+debug(148): [Comparing 7] :with 6
+debug(149): [Comparing 7] :with 7
+debug(150): [Comparing 7] :with 8
+debug(151): [Comparing 8] :with 6
+debug(152): [Comparing 8] :with 7
+debug(153): [Comparing 8] :with 8
+debug(154): [RecordingPlacement ] :6
+debug(155): [RecordingPlacement ] :7
+debug(156): [RecordingPlacement ] :8
+debug(157): [Misses ] :0
+debug(158): [RecordingPlacement ] :6
+debug(159): [RecordingPlacement ] :7
+debug(160): [RecordingPlacement ] :8
 
 *************       Level8       *************
 
-debug(121): [RecordingPlacement ] :2
-debug(122): [RecordingPlacement ] :3
+debug(161): [RecordingPlacement ] :6
+debug(162): [RecordingPlacement ] :7
+debug(163): [RecordingPlacement ] :8
 
 *************       Action Pressed Lets See Player Spots       *************
 
-debug(123): [1 Player Spot ] :1
-debug(124): [2 Player Spot ] :2
+debug(164): [1 Player Spot ] :6
+debug(165): [2 Player Spot ] :7
+debug(166): [3 Player Spot ] :8
 
 *************       These are the holder spots       *************
 
-debug(125): [1 Held Spot ] :2
-debug(126): [2 Held Spot ] :3
-debug(127): [Comparing 1] :with 2
-debug(128): [Comparing 1] :with 3
-debug(129): [Comparing 2] :with 2
-debug(130): [Comparing 2] :with 3
-
-*************       Erasing Items       *************
-
-debug(131): [RecordingPlacement ] :2
-debug(132): [Misses ] :1
-debug(133): [RecordingPlacement ] :2
+debug(167): [1 Held Spot ] :6
+debug(168): [2 Held Spot ] :7
+debug(169): [3 Held Spot ] :8
+debug(170): [Comparing 6] :with 6
+debug(171): [Comparing 6] :with 7
+debug(172): [Comparing 6] :with 8
+debug(173): [Comparing 7] :with 6
+debug(174): [Comparing 7] :with 7
+debug(175): [Comparing 7] :with 8
+debug(176): [Comparing 8] :with 6
+debug(177): [Comparing 8] :with 7
+debug(178): [Comparing 8] :with 8
+debug(179): [RecordingPlacement ] :6
+debug(180): [RecordingPlacement ] :7
+debug(181): [RecordingPlacement ] :8
+debug(182): [Misses ] :0
+debug(183): [RecordingPlacement ] :6
+debug(184): [RecordingPlacement ] :7
+debug(185): [RecordingPlacement ] :8
 
 *************       Level9       *************
 
-debug(134): [RecordingPlacement ] :2
+debug(186): [RecordingPlacement ] :6
+debug(187): [RecordingPlacement ] :7
+debug(188): [RecordingPlacement ] :8
 
 *************       Action Pressed Lets See Player Spots       *************
 
-debug(135): [1 Player Spot ] :3
+debug(189): [1 Player Spot ] :6
+debug(190): [2 Player Spot ] :7
+debug(191): [3 Player Spot ] :8
 
 *************       These are the holder spots       *************
 
-debug(136): [1 Held Spot ] :2
-debug(137): [Comparing 3] :with 2
+debug(192): [1 Held Spot ] :6
+debug(193): [2 Held Spot ] :7
+debug(194): [3 Held Spot ] :8
+debug(195): [Comparing 6] :with 6
+debug(196): [Comparing 6] :with 7
+debug(197): [Comparing 6] :with 8
+debug(198): [Comparing 7] :with 6
+debug(199): [Comparing 7] :with 7
+debug(200): [Comparing 7] :with 8
+debug(201): [Comparing 8] :with 6
+debug(202): [Comparing 8] :with 7
+debug(203): [Comparing 8] :with 8
+debug(204): [RecordingPlacement ] :6
+debug(205): [RecordingPlacement ] :7
+debug(206): [RecordingPlacement ] :8
+debug(207): [Misses ] :0
+debug(208): [RecordingPlacement ] :6
+debug(209): [RecordingPlacement ] :7
+debug(210): [RecordingPlacement ] :8
+
+*************       Level10       *************
+
+debug(211): [RecordingPlacement ] :6
+debug(212): [RecordingPlacement ] :7
+debug(213): [RecordingPlacement ] :8
+
+*************       Action Pressed Lets See Player Spots       *************
+
+debug(214): [1 Player Spot ] :6
+debug(215): [2 Player Spot ] :7
+debug(216): [3 Player Spot ] :8
+
+*************       These are the holder spots       *************
+
+debug(217): [1 Held Spot ] :6
+debug(218): [2 Held Spot ] :7
+debug(219): [3 Held Spot ] :8
+debug(220): [Comparing 6] :with 6
+debug(221): [Comparing 6] :with 7
+debug(222): [Comparing 6] :with 8
+debug(223): [Comparing 7] :with 6
+debug(224): [Comparing 7] :with 7
+debug(225): [Comparing 7] :with 8
+debug(226): [Comparing 8] :with 6
+debug(227): [Comparing 8] :with 7
+debug(228): [Comparing 8] :with 8
+debug(229): [RecordingPlacement ] :6
+debug(230): [RecordingPlacement ] :7
+debug(231): [RecordingPlacement ] :8
+debug(232): [Misses ] :0
+debug(233): [RecordingPlacement ] :6
+debug(234): [RecordingPlacement ] :7
+debug(235): [RecordingPlacement ] :8
+
+*************       Level11       *************
+
+debug(236): [RecordingPlacement ] :6
+debug(237): [RecordingPlacement ] :7
+debug(238): [RecordingPlacement ] :8
+
+*************       Action Pressed Lets See Player Spots       *************
+
+debug(239): [1 Player Spot ] :7
+debug(240): [2 Player Spot ] :8
+debug(241): [3 Player Spot ] :9
+
+*************       These are the holder spots       *************
+
+debug(242): [1 Held Spot ] :6
+debug(243): [2 Held Spot ] :7
+debug(244): [3 Held Spot ] :8
+debug(245): [Comparing 7] :with 6
+debug(246): [Comparing 7] :with 7
+debug(247): [Comparing 7] :with 8
+debug(248): [Comparing 8] :with 6
+debug(249): [Comparing 8] :with 7
+debug(250): [Comparing 8] :with 8
+debug(251): [Comparing 9] :with 6
+debug(252): [Comparing 9] :with 7
+debug(253): [Comparing 9] :with 8
 
 *************       Erasing Items       *************
 
-debug(138): [Misses ] :1
+debug(254): [RecordingPlacement ] :7
+debug(255): [RecordingPlacement ] :8
+debug(256): [Misses ] :1
+debug(257): [RecordingPlacement ] :7
+debug(258): [RecordingPlacement ] :8
 
-*************       AnimeDone       *************
+*************       Level12       *************
 
-
-*************       First time pressed       *************
-
-
-*************       Action Pressed Lets See Player Spots       *************
-
-debug(139): [1 Player Spot ] :1
-debug(140): [2 Player Spot ] :2
-debug(141): [3 Player Spot ] :3
-
-*************       These are the holder spots       *************
-
-debug(142): [RecordingPlacement ] :1
-debug(143): [RecordingPlacement ] :2
-debug(144): [RecordingPlacement ] :3
-debug(145): [Misses ] :0
-debug(146): [RecordingPlacement ] :1
-debug(147): [RecordingPlacement ] :2
-debug(148): [RecordingPlacement ] :3
-
-*************       Level2       *************
-
-debug(149): [RecordingPlacement ] :1
-debug(150): [RecordingPlacement ] :2
-debug(151): [RecordingPlacement ] :3
+debug(259): [RecordingPlacement ] :7
+debug(260): [RecordingPlacement ] :8
 
 *************       Action Pressed Lets See Player Spots       *************
 
-debug(152): [1 Player Spot ] :2
-debug(153): [2 Player Spot ] :3
-debug(154): [3 Player Spot ] :4
+debug(261): [1 Player Spot ] :7
+debug(262): [2 Player Spot ] :8
 
 *************       These are the holder spots       *************
 
-debug(155): [1 Held Spot ] :1
-debug(156): [2 Held Spot ] :2
-debug(157): [3 Held Spot ] :3
-debug(158): [Comparing 2] :with 1
-debug(159): [Comparing 2] :with 2
-debug(160): [Comparing 2] :with 3
-debug(161): [Comparing 3] :with 1
-debug(162): [Comparing 3] :with 2
-debug(163): [Comparing 3] :with 3
-debug(164): [Comparing 4] :with 1
-debug(165): [Comparing 4] :with 2
-debug(166): [Comparing 4] :with 3
+debug(263): [1 Held Spot ] :7
+debug(264): [2 Held Spot ] :8
+debug(265): [Comparing 7] :with 7
+debug(266): [Comparing 7] :with 8
+debug(267): [Comparing 8] :with 7
+debug(268): [Comparing 8] :with 8
+debug(269): [RecordingPlacement ] :7
+debug(270): [RecordingPlacement ] :8
+debug(271): [Misses ] :0
+debug(272): [RecordingPlacement ] :7
+debug(273): [RecordingPlacement ] :8
+
+*************       Level13       *************
+
+debug(274): [RecordingPlacement ] :7
+debug(275): [RecordingPlacement ] :8
+
+*************       Action Pressed Lets See Player Spots       *************
+
+debug(276): [1 Player Spot ] :7
+debug(277): [2 Player Spot ] :8
+
+*************       These are the holder spots       *************
+
+debug(278): [1 Held Spot ] :7
+debug(279): [2 Held Spot ] :8
+debug(280): [Comparing 7] :with 7
+debug(281): [Comparing 7] :with 8
+debug(282): [Comparing 8] :with 7
+debug(283): [Comparing 8] :with 8
+debug(284): [RecordingPlacement ] :7
+debug(285): [RecordingPlacement ] :8
+debug(286): [Misses ] :0
+debug(287): [RecordingPlacement ] :7
+debug(288): [RecordingPlacement ] :8
+
+*************       Level14       *************
+
+debug(289): [RecordingPlacement ] :7
+debug(290): [RecordingPlacement ] :8
+
+*************       Action Pressed Lets See Player Spots       *************
+
+debug(291): [1 Player Spot ] :7
+debug(292): [2 Player Spot ] :8
+
+*************       These are the holder spots       *************
+
+debug(293): [1 Held Spot ] :7
+debug(294): [2 Held Spot ] :8
+debug(295): [Comparing 7] :with 7
+debug(296): [Comparing 7] :with 8
+debug(297): [Comparing 8] :with 7
+debug(298): [Comparing 8] :with 8
+debug(299): [RecordingPlacement ] :7
+debug(300): [RecordingPlacement ] :8
+debug(301): [Misses ] :0
+debug(302): [RecordingPlacement ] :7
+debug(303): [RecordingPlacement ] :8
+
+*************       Level15       *************
+
+debug(304): [RecordingPlacement ] :7
+debug(305): [RecordingPlacement ] :8
+
+*************       Action Pressed Lets See Player Spots       *************
+
+debug(306): [1 Player Spot ] :7
+debug(307): [2 Player Spot ] :8
+
+*************       These are the holder spots       *************
+
+debug(308): [1 Held Spot ] :7
+debug(309): [2 Held Spot ] :8
+debug(310): [Comparing 7] :with 7
+debug(311): [Comparing 7] :with 8
+debug(312): [Comparing 8] :with 7
+debug(313): [Comparing 8] :with 8
+debug(314): [RecordingPlacement ] :7
+debug(315): [RecordingPlacement ] :8
+debug(316): [Misses ] :0
+debug(317): [RecordingPlacement ] :7
+debug(318): [RecordingPlacement ] :8
+
+*************       Level16       *************
+
+debug(319): [RecordingPlacement ] :7
+debug(320): [RecordingPlacement ] :8
+
+*************       Action Pressed Lets See Player Spots       *************
+
+debug(321): [1 Player Spot ] :8
+debug(322): [2 Player Spot ] :9
+
+*************       These are the holder spots       *************
+
+debug(323): [1 Held Spot ] :7
+debug(324): [2 Held Spot ] :8
+debug(325): [Comparing 8] :with 7
+debug(326): [Comparing 8] :with 8
+debug(327): [Comparing 9] :with 7
+debug(328): [Comparing 9] :with 8
 
 *************       Erasing Items       *************
 
-debug(167): [RecordingPlacement ] :2
-debug(168): [RecordingPlacement ] :3
-debug(169): [Misses ] :1
-debug(170): [RecordingPlacement ] :2
-debug(171): [RecordingPlacement ] :3
+debug(329): [RecordingPlacement ] :8
+debug(330): [Misses ] :1
+debug(331): [RecordingPlacement ] :8
 
-*************       Level3       *************
+*************       Level17       *************
 
-debug(172): [RecordingPlacement ] :2
-debug(173): [RecordingPlacement ] :3
+debug(332): [RecordingPlacement ] :8
+
+*************       Action Pressed Lets See Player Spots       *************
+
+debug(333): [1 Player Spot ] :7
+
+*************       These are the holder spots       *************
+
+debug(334): [1 Held Spot ] :8
+debug(335): [Comparing 7] :with 8
+
+*************       Erasing Items       *************
+
+debug(336): [Misses ] :1
+debug(337): [Opening ] :HighScores
+debug(338): [Opening ] :HighScores
+debug(339): [Opening ] :HighScores

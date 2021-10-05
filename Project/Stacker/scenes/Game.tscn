@@ -7,7 +7,7 @@
 [ext_resource path="res://bin/Game.gd" type="Script" id=5]
 [ext_resource path="res://resources/justmytype.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://resources/gameMachineScreen.png" type="Texture" id=7]
-[ext_resource path="res://resources/jumpView.png" type="Texture" id=8]
+[ext_resource path="res://resources/scrollingbg.png" type="Texture" id=8]
 
 [sub_resource type="StyleBoxTexture" id=1]
 
@@ -114,7 +114,7 @@ tracks/6/keys = {
 "times": PoolRealArray( 0, 2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1.3, 1.3 ), Vector2( 1, 1 ) ]
+"values": [ Vector2( 1.3, 1.3 ), Vector2( 1.2647, 1 ) ]
 }
 tracks/7/type = "value"
 tracks/7/path = NodePath("screen:offset")
@@ -148,27 +148,27 @@ size = 50
 extra_spacing_space = 5
 font_data = ExtResource( 6 )
 
-[sub_resource type="StyleBoxTexture" id=15]
+[sub_resource type="StyleBoxTexture" id=10]
 
-[sub_resource type="DynamicFont" id=16]
+[sub_resource type="DynamicFont" id=11]
 size = 25
 extra_spacing_space = 5
 font_data = ExtResource( 6 )
 
-[sub_resource type="StyleBoxTexture" id=10]
+[sub_resource type="StyleBoxTexture" id=12]
 
-[sub_resource type="DynamicFont" id=11]
+[sub_resource type="DynamicFont" id=13]
 size = 33
 extra_spacing_space = 5
 font_data = ExtResource( 6 )
 
-[sub_resource type="StyleBoxFlat" id=12]
+[sub_resource type="StyleBoxFlat" id=14]
 bg_color = Color( 0.368627, 0.333333, 0.333333, 0.321569 )
 
-[sub_resource type="StyleBoxFlat" id=13]
+[sub_resource type="StyleBoxFlat" id=15]
 bg_color = Color( 0.6, 0.6, 0.6, 0.545098 )
 
-[sub_resource type="StyleBoxEmpty" id=14]
+[sub_resource type="StyleBoxEmpty" id=16]
 
 [node name="Game" type="Node2D"]
 position = Vector2( -204.536, 4.23785 )
@@ -189,7 +189,8 @@ texture = ExtResource( 7 )
 offset = Vector2( 400, 310 )
 
 [node name="jumpView" type="Sprite" parent="screen"]
-position = Vector2( 415.172, -480.854 )
+position = Vector2( 409.928, -1971.29 )
+scale = Vector2( 1.2647, 1 )
 texture = ExtResource( 8 )
 
 [node name="ColorRect2" type="ColorRect" parent="screen"]
@@ -252,7 +253,7 @@ margin_right = 380.28
 margin_bottom = 244.369
 custom_styles/normal = SubResource( 5 )
 custom_fonts/font = SubResource( 6 )
-custom_colors/font_color = Color( 0.219608, 0.639216, 0.117647, 1 )
+custom_colors/font_color = Color( 0.639216, 0.117647, 0.117647, 1 )
 text = "3"
 align = 1
 __meta__ = {
@@ -322,8 +323,8 @@ margin_left = 269.713
 margin_top = 289.671
 margin_right = 545.713
 margin_bottom = 354.671
-custom_styles/normal = SubResource( 15 )
-custom_fonts/font = SubResource( 16 )
+custom_styles/normal = SubResource( 10 )
+custom_fonts/font = SubResource( 11 )
 text = "Enter name to submit score"
 align = 1
 __meta__ = {
@@ -335,8 +336,8 @@ margin_left = 400.732
 margin_top = 401.504
 margin_right = 583.732
 margin_bottom = 466.504
-custom_styles/normal = SubResource( 10 )
-custom_fonts/font = SubResource( 11 )
+custom_styles/normal = SubResource( 12 )
+custom_fonts/font = SubResource( 13 )
 text = "HighScores"
 align = 1
 __meta__ = {
@@ -348,8 +349,8 @@ margin_left = 230.158
 margin_top = 400.445
 margin_right = 413.158
 margin_bottom = 465.445
-custom_styles/normal = SubResource( 10 )
-custom_fonts/font = SubResource( 11 )
+custom_styles/normal = SubResource( 12 )
+custom_fonts/font = SubResource( 13 )
 text = "Play Again"
 align = 1
 __meta__ = {
@@ -369,9 +370,9 @@ margin_left = 430.0
 margin_top = 404.0
 margin_right = 548.0
 margin_bottom = 438.0
-custom_styles/hover = SubResource( 12 )
-custom_styles/pressed = SubResource( 13 )
-custom_styles/normal = SubResource( 14 )
+custom_styles/hover = SubResource( 14 )
+custom_styles/pressed = SubResource( 15 )
+custom_styles/normal = SubResource( 16 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -381,12 +382,16 @@ margin_left = 261.545
 margin_top = 400.822
 margin_right = 379.545
 margin_bottom = 434.822
-custom_styles/hover = SubResource( 12 )
-custom_styles/pressed = SubResource( 13 )
-custom_styles/normal = SubResource( 14 )
+custom_styles/hover = SubResource( 14 )
+custom_styles/pressed = SubResource( 15 )
+custom_styles/normal = SubResource( 16 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Timer" type="Timer" parent="Finish"]
+wait_time = 2.0
+one_shot = true
 
 [node name="debug" type="Label" parent="."]
 visible = false
@@ -406,3 +411,4 @@ __meta__ = {
 [connection signal="timeout" from="Timer" to="." method="StartPlay"]
 [connection signal="pressed" from="Finish/esc" to="." method="closeStart"]
 [connection signal="pressed" from="Finish/again" to="." method="playAgain"]
+[connection signal="timeout" from="Finish/Timer" to="." method="finishFinish"]

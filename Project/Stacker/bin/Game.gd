@@ -28,7 +28,7 @@ var holderPlacement = []
 var allowedToPlace = false
 var pause = false
 var heightCount = 1
-var playerCounter = 3
+var playerCounter = 5
 var gameSpeed = .5
 var firstTime = true
 
@@ -83,7 +83,7 @@ func recordPlacement():
 	
 	holderPlacement.clear()
 	for items in player:
-		hub.debug("RecordingPlacement ",items.getSpot())
+		
 		holderPlacement.append(items.getSpot())
 
 func loadSquare(argSpot,argHeight,origDirection):
@@ -116,9 +116,11 @@ func changeDirectionR():
 		items.setSpot(items.getSpot())	
 
 func startGame():
-	loadSquare(0,1,"Right")
-	loadSquare(1,1,"Right")
-	loadSquare(2,1,"Right")
+	var i = 0
+	while i < playerCounter:
+		loadSquare(i,1,"Right")
+		i+=1
+	
 	
 
 
@@ -144,10 +146,13 @@ func spawnFallingSquare(arg):
 	squareFall.position = arg.position
 	squareFall.get_node("blue").visible = true
 	squareFall.fallDown()
-	
+func finishFinish():
+	for items in playerCache:
+		items.visible = false
+	get_node("Finish").visible = true	
 
 func StartPlay():
-	hub.debugTitle("AnimeDone")
+	
 	startGame()
 	allowedToPlace = true
 
@@ -155,20 +160,16 @@ func ActionPressed():
 	if !pause && allowedToPlace:
 		if firstTime:
 			firstTime = false
-			hub.debugTitle("First time pressed")
-		var counte = 0
-		hub.debugTitle("Action Pressed Lets See Player Spots")
-		for item in player:
-			counte +=1
-			hub.debug(str(counte)+" Player Spot ", str(item.getSpot()))
+		
+		
+	
+		
+			
 
 
-		hub.debugTitle("These are the holder spots")
-		counte = 0
+	
+		
 		var wins = 0
-		for item in holderPlacement:
-			counte +=1
-			hub.debug(str(counte)+" Held Spot ", str(item))
 
 		if !holderPlacement.empty():
 			for squares in player:
@@ -180,7 +181,7 @@ func ActionPressed():
 				var found = false
 				for items in holderPlacement:
 					
-					hub.debug("Comparing " + str(squares.getSpot()), "with "+ str(items))
+			
 					if squares.getSpot() == items:
 						found = true
 				if found == false:
@@ -191,24 +192,46 @@ func ActionPressed():
 
 						
 		for items in player:
+			if items.visible == true:
+				items.get_node("AnimationPlayer").play("hit")
 			if items.visible == false:
 				remove_child(items)
-				hub.debugTitle("Erasing Items")
 				player.erase(items)
 				
 					
 					
 					
 		
-
+		
 		playerCounter-= wins
 		recordPlacement()
-		hub.debug("Misses ",wins)
+	
 		if playerCounter <= 0:
 			pause = true
-			for items in playerCache:
-				items.visible = false
-			get_node("Finish").visible = true
+			get_node("dataLevel/Time").visible = true
+			get_node("dataLevel/Time").text = "Nice Try"
+			match heightCount:
+				0,1:
+					get_node("dataLevel/Time").text = "Stack Ontop"
+				2,3,4,5:
+					get_node("dataLevel/Time").text = "You Dont Get It"
+
+				6,7,8,9:
+					get_node("dataLevel/Time").text = "Fail"
+				10,11,12,13,14,15:
+					get_node("dataLevel/Time").text = "Low Effort"
+				16,17,18,19,20,21,22,23,24,25:
+					get_node("dataLevel/Time").text = "Grandmother"
+				26,27,28,29,30,31,32,33,34,35:
+					get_node("dataLevel/Time").text = "Decent"
+				36,37,38,39,40,41,42,43,44,45:
+					get_node("dataLevel/Time").text = "Nice Miss Lol"
+				46,47,48,49,50,51,52,53,54,55:
+					get_node("dataLevel/Time").text = "Swing n a MISS"
+				57,58,59,60,61,62,63,64:
+					get_node("dataLevel/Time").text = "Heather Tier"
+
+			get_node("Finish/Timer").start()
 			return
 
 		gameSpeed = .5 - (heightCount /16)
@@ -221,7 +244,7 @@ func ActionPressed():
 		player.clear()
 
 		heightCount+=1
-		hub.debugTitle("Level" + str(heightCount))
+		
 		var tempPlayerCounter = 0
 		
 		while tempPlayerCounter < playerCounter:
